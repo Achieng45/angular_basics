@@ -9,5 +9,7 @@ import { RouterOutlet } from '@angular/router';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'learning_angular';
+  title = 'learning angular';
+  disabled="false"
+  onClick="True"
 }

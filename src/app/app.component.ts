@@ -12,4 +12,12 @@ export class AppComponent {
   title = 'learning angular';
   isdisabled=false
   onClick=true
+  defaultVal="define"
+  PassValueToComponent(e:Event){
+    console.log((e.target as HTMLInputElement).value);
+  }
+
+  PassValue(e:Event){
+    console.log((e.target as HTMLInputElement).value);
+  }
 }

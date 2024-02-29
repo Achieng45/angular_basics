@@ -1,5 +1,10 @@
-import { Component } from '@angular/core';
+import { Component, NgModule } from '@angular/core';
+import { FormsModule, NgModel } from '@angular/forms';
+import { BrowserModule } from '@angular/platform-browser';
 import { RouterOutlet } from '@angular/router';
+
+
+
 
 @Component({
   selector: 'app-root',
@@ -8,6 +13,23 @@ import { RouterOutlet } from '@angular/router';
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
+
+
+
+
+
+
+
 export class AppComponent {
-  title = 'learning_angular';
+  title = 'learning angular';
+  isdisabled=false
+defaultVal="listen Ngmodel";
+  
+  PassValueToComponent(e:Event){
+    console.log((e.target as HTMLInputElement).value);
+  }
+
+  PassValue(e:Event){
+    console.log((e.target as HTMLInputElement).value);
+  }
 }

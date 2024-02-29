@@ -13,6 +13,8 @@ export class AppComponent {
   isdisabled=false
   onClick=true
   defaultVal="define"
+  IsApproved=false
+
   PassValueToComponent(e:Event){
     console.log((e.target as HTMLInputElement).value);
   }
@@ -20,4 +22,10 @@ export class AppComponent {
   PassValue(e:Event){
     console.log((e.target as HTMLInputElement).value);
   }
+
+approved(status: boolean){
+  this.IsApproved=status
+}
+
+
 }

@@ -1,11 +1,31 @@
 <div class="container">
-  <h1>String interpolation</h1>
-  <h1>What I'm I doing? {{title}}</h1>
+  <h1>data binding</h1>
+  <h2>string interpolation</h2>
+  <p>What i'm I doing? {{title}}</p>
 
-  <h2>Property binding</h2>
-  <h2>How is the going</h2>
-  <button [disabled]="isdisabled">Good</button>
+  <h2>property binding</h2>
+  <p>How is it going</p>
+  <button [disabled]="isdisabled">so far so good</button>
 
-  <h2>So far so good</h2>
-  <button (click)="onClick">Yes</button>
+
+  <h1>Event binding</h1>
+  <input type="text" (input)="PassValueToComponent($event)">
+   
+  <h2>Two way binding</h2>
+  <input type="text" [value]="defaultVal" (input)="PassValue($event)">
+  
+
 </div>
+
+
+
+
+<div class="container"> DIRECTIVES
+  <h1>Subject diectives</h1>
+  <button (click)="approved(true)">Approved</button>
+  <button (click)="approved(false)">denied</button>
+  <div>
+    <p *ngIf="IsApproved">Application has been approved</p>
+    <p *ngIf="!IsApproved">Application has not been approved</p>
+  </div>
+</div> 

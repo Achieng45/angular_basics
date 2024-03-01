@@ -22,6 +22,7 @@ import { RouterOutlet } from '@angular/router';
 
 export class AppComponent {
   title = 'learning angular';
+<<<<<<< HEAD
   isdisabled=false
 defaultVal="listen Ngmodel";
   
@@ -33,3 +34,8 @@ defaultVal="listen Ngmodel";
     console.log((e.target as HTMLInputElement).value);
   }
 }
+=======
+  disabled="false"
+  onClick="True"
+}
+>>>>>>> master

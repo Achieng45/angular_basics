@@ -22,20 +22,20 @@ import { RouterOutlet } from '@angular/router';
 
 export class AppComponent {
   title = 'learning angular';
-<<<<<<< HEAD
-  isdisabled=false
-defaultVal="listen Ngmodel";
-  
-  PassValueToComponent(e:Event){
-    console.log((e.target as HTMLInputElement).value);
-  }
-
-  PassValue(e:Event){
-    console.log((e.target as HTMLInputElement).value);
-  }
-}
-=======
   disabled="false"
   onClick="True"
-}
->>>>>>> master
+
+  isdisabled=false
+  defaultVal="listen Ngmodel";
+    
+    PassValueToComponent(e:Event){
+      console.log((e.target as HTMLInputElement).value);
+    }
+  
+    PassValue(e:Event){
+      console.log((e.target as HTMLInputElement).value);
+    }
+  }
+
+
+

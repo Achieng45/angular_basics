@@ -22,18 +22,12 @@ import { RouterOutlet } from '@angular/router';
 
 export class AppComponent {
   title = 'learning angular';
-<<<<<<< HEAD
-<<<<<<< HEAD
-  isdisabled=false
-defaultVal="listen Ngmodel";
-  
-=======
+
   isdisabled=false
   onClick=true
   defaultVal="define"
   IsApproved=false
 
->>>>>>> components_databinding
   PassValueToComponent(e:Event){
     console.log((e.target as HTMLInputElement).value);
   }
@@ -41,18 +35,11 @@ defaultVal="listen Ngmodel";
   PassValue(e:Event){
     console.log((e.target as HTMLInputElement).value);
   }
-<<<<<<< HEAD
-}
-=======
-  disabled="false"
-  onClick="True"
-=======
+  
 
 approved(status: boolean){
   this.IsApproved=status
 }
 
 
->>>>>>> components_databinding
 }
->>>>>>> master

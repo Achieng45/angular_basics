@@ -1,3 +1,4 @@
+import { NgIf } from '@angular/common';
 import { Component, NgModule } from '@angular/core';
 import { FormsModule, NgModel } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
@@ -9,7 +10,7 @@ import { RouterOutlet } from '@angular/router';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet],
+  imports: [RouterOutlet,NgIf],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
@@ -22,7 +23,10 @@ import { RouterOutlet } from '@angular/router';
 
 export class AppComponent {
   title = 'learning angular';
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   isdisabled=false
   onClick=true
   defaultVal="define"
@@ -35,7 +39,10 @@ export class AppComponent {
   PassValue(e:Event){
     console.log((e.target as HTMLInputElement).value);
   }
+<<<<<<< HEAD
   
+=======
+>>>>>>> master
 
 approved(status: boolean){
   this.IsApproved=status

@@ -1,9 +1,31 @@
 <div>
-    <h1>Learning angular</h1>
-    <p>first-component works!</p>
-    <p> string interplolation</p>
-    <p>property binding</p>
-    <p>event binding</p>
+    <h1>change the attributes of the DOM</h1>
+    <div>
+        <P [ngClass]="{
+
+         red:highlightcolor==='red',
+        'green-color':highlightcolor==='green',
+        'blue':highlightcolor==='blue' }">
+
+        click button to highlight</P>
+    </div>
+<div>
+    <button (click)="highlight('red')">no</button>
+    <button (click)="highlight('green')">yes</button>
+    <button (click)="highlight('blue')">maybe</button>
+</div>
+
+<div>
+    <p [ngStyle]="{
+        color:isStyleApplied === true? 'white' : 'black',
+        backgroundColor:isStyleApplied === true? 'green':'white'
+
+
+    }">click to toggle</p>
+    <button (click)="togglestyle">
+        Toggle
+    </button>
+</div>
 </div>
 
 

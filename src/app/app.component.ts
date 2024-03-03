@@ -2,6 +2,7 @@ import { Component, NgModule } from '@angular/core';
 import { FormsModule, NgModel } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterOutlet } from '@angular/router';
+import { FirstComponentComponent } from './first-component/first-component.component';
 
 
 
@@ -9,7 +10,7 @@ import { RouterOutlet } from '@angular/router';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet],
+  imports: [RouterOutlet,FirstComponentComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
@@ -22,9 +23,11 @@ import { RouterOutlet } from '@angular/router';
 
 export class AppComponent {
   title = 'learning angular';
-<<<<<<< HEAD
-  isdisabled=false
-defaultVal="listen Ngmodel";
+  isdisabled="false"
+  onClick="True"
+
+
+  defaultVal="listen Ngmodel";
   
   PassValueToComponent(e:Event){
     console.log((e.target as HTMLInputElement).value);
@@ -33,9 +36,6 @@ defaultVal="listen Ngmodel";
   PassValue(e:Event){
     console.log((e.target as HTMLInputElement).value);
   }
+
+
 }
-=======
-  disabled="false"
-  onClick="True"
-}
->>>>>>> master

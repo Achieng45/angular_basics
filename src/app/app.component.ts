@@ -23,10 +23,6 @@ import { RouterOutlet } from '@angular/router';
 
 export class AppComponent {
   title = 'learning angular';
-<<<<<<< HEAD
-
-=======
->>>>>>> master
   isdisabled=false
   onClick=true
   defaultVal="define"
@@ -39,10 +35,6 @@ export class AppComponent {
   PassValue(e:Event){
     console.log((e.target as HTMLInputElement).value);
   }
-<<<<<<< HEAD
-  
-=======
->>>>>>> master
 
 approved(status: boolean){
   this.IsApproved=status

@@ -1,8 +1,8 @@
+import { NgIf } from '@angular/common';
 import { Component, NgModule } from '@angular/core';
-import { FormsModule, NgModel } from '@angular/forms';
+import { FormsModule, NgModel, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterOutlet } from '@angular/router';
-import { FirstComponentComponent } from './first-component/first-component.component';
 
 
 
@@ -10,7 +10,7 @@ import { FirstComponentComponent } from './first-component/first-component.compo
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet,FirstComponentComponent],
+  imports: [RouterOutlet,FormsModule,ReactiveFormsModule,NgIf],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
@@ -23,19 +23,22 @@ import { FirstComponentComponent } from './first-component/first-component.compo
 
 export class AppComponent {
   title = 'learning angular';
-  isdisabled="false"
+  disabled="false"
   onClick="True"
 
-
+  isdisabled=false
   defaultVal="listen Ngmodel";
+
+  isApproved=false
+    
+    PassValueToComponent(e:Event){
+      console.log((e.target as HTMLInputElement).value);
+    }
   
-  PassValueToComponent(e:Event){
-    console.log((e.target as HTMLInputElement).value);
-  }
-
-  PassValue(e:Event){
-    console.log((e.target as HTMLInputElement).value);
+    PassValue(e:Event){
+      console.log((e.target as HTMLInputElement).value);
+    }
   }
 
 
-}
+

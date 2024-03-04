@@ -4,12 +4,14 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class SharedService {
-  firstpagevalue: number ;
+  //firstpagevalue: number ;
   firstnum=0;
   secondnum=0;
+  
 
   constructor() { }
-  calculate(firstnum,secondnum){
+
+  calculate(firstnum: number,secondnum: number){
     return firstnum+secondnum;
   }
 }

@@ -17,6 +17,7 @@
 
 <div>
     <p [ngStyle]="{
+        
         color:isStyleApplied === true? 'white' : 'black',
         backgroundColor:isStyleApplied === true? 'green':'white'
 
@@ -32,12 +33,11 @@
 
 <div>
     <p>communication between components</p>
-
-<input type="text" name="">
+<input type="text" [(ngModel)]="usinginputinparent">
 
 </div>
 </div>
-<app-second-component></app-second-component>
+<app-second-component [usinginput]="usinginputinparent" (sendMessageEmmiter)="receivemessage($event)" ></app-second-component>
 
 
 

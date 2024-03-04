@@ -1,6 +1,8 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { FirstComponentComponent } from './first-component.component';
+import { CommonModule, NgClass, NgStyle } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 
 describe('FirstComponentComponent', () => {
   let component: FirstComponentComponent;
@@ -8,7 +10,7 @@ describe('FirstComponentComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [FirstComponentComponent]
+      imports: [FirstComponentComponent,NgClass,NgStyle,FormsModule]
     })
     .compileComponents();
     

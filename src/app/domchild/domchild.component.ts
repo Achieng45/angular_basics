@@ -1,4 +1,4 @@
-import { AfterContentChecked, AfterContentInit, Component, DoCheck, OnChanges, OnDestroy, OnInit, SimpleChanges, input } from '@angular/core';
+import { AfterContentChecked, AfterContentInit, AfterViewChecked, AfterViewInit, Component, ContentChild, DoCheck, OnChanges, OnDestroy, OnInit, SimpleChanges, Input } from '@angular/core';
 import { DomComponent } from "../dom/dom.component";
 import { FormsModule } from '@angular/forms';
 
@@ -9,14 +9,25 @@ import { FormsModule } from '@angular/forms';
     styleUrl: './domchild.component.css',
     imports: [DomComponent,FormsModule]
 })
-export class DomchildComponent implements OnInit,OnDestroy,OnChanges, DoCheck,AfterContentInit{
+export class DomchildComponent implements OnInit,OnDestroy,OnChanges, DoCheck,AfterContentInit,AfterContentChecked,AfterViewInit,AfterViewChecked{
+  
+  
   ngAfterContentInit(): void {
-    console.log("child content init constructor is called")
+    console.log("child content init constructor is called");
     
   }
  
   constructor(){
-    console.log("Child constructor is called")
+    console.log("Child constructor is called");
+  }
+  ngAfterViewChecked(): void {
+    throw new Error('Method not implemented.');
+  }
+  ngAfterViewInit(): void {
+    throw new Error('Method not implemented.');
+  }
+  ngAfterContentChecked(): void {
+    throw new Error('Method not implemented.');
   }
   ngDoCheck(): void {
     console.log("docheck constructor is called");
@@ -30,9 +41,8 @@ export class DomchildComponent implements OnInit,OnDestroy,OnChanges, DoCheck,Af
   ngOnDestroy(): void {
       console.log("child on destroy")
   }
-  
-  @input(){
-    myname="Stephanie";
+  @Input() myname:string = '';
 
-  }
+  
+  // @ContentChild('projectcontent')projectcontent:any;
 }

@@ -19,7 +19,7 @@ constructor(private router:Router,private sharedService:SharedService){}
 
 calculate(){
   this.output=this.sharedService.calculate(this.firstnum,this.secondnum)
-  this.previouspageval=this.sharedService.firstpageval
+  
 }
 
   ngOnInit(): void {

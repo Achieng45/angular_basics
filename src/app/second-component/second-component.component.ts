@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, OnInit, input } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output, input } from '@angular/core';
 import { SharedService } from '../shared.service';
 import { Router } from '@angular/router';
 
@@ -26,7 +26,7 @@ calculate(){
     throw new Error('Method not implemented.');
   }
 
-
+  @Output()
 
 
   @Input()

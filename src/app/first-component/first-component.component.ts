@@ -1,23 +1,17 @@
-import { FormStyle, NgClass, NgStyle } from '@angular/common';
-import { withInterceptors } from '@angular/common/http';
-import { Component, OnInit, Output } from '@angular/core';
+import { Component, Output } from '@angular/core';
 import { Router, RouterOutlet } from '@angular/router';
-
-import { FormsModule } from '@angular/forms';
 import { SharedService } from '../shared.service';
+import { NgClass, NgStyle } from '@angular/common';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SecondComponentComponent } from "../second-component/second-component.component";
-
-
-
 @Component({
     selector: 'app-first-component',
     standalone: true,
     templateUrl: './first-component.component.html',
     styleUrl: './first-component.component.css',
-    imports: [RouterOutlet, NgClass, NgStyle, FormsModule, SecondComponentComponent]
+    imports: [RouterOutlet, NgClass, NgStyle, ReactiveFormsModule, FormsModule, SecondComponentComponent]
 })
-
-export class FirstComponentComponent implements OnInit{
+export class FirstComponentComponent {
   firstnum=0;
   secondnum=0;
   output=0;
@@ -28,7 +22,7 @@ ngOnInit(): void {
     
 }
 
-caculate(){
+calculate(){
   this.output=this.sharedservice.calculate(this.firstnum,this.secondnum);
   
 }
@@ -44,12 +38,12 @@ togglestyle(){
 }
 
 usinginputinparent='Achieng Otieno'
+
 @Output()
 msgfromchild=""
 receivemessage(msg: any){
   this.msgfromchild=msg
 }
-
 
 
 }

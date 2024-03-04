@@ -17,7 +17,7 @@
 
 <div>
     <p [ngStyle]="{
-        
+
         color:isStyleApplied === true? 'white' : 'black',
         backgroundColor:isStyleApplied === true? 'green':'white'
 
@@ -34,10 +34,21 @@
 <div>
     <p>communication between components</p>
 <input type="text" [(ngModel)]="usinginputinparent">
+  <p>{{msgfromchild}}</p>
 
 </div>
 </div>
 <app-second-component [usinginput]="usinginputinparent" (sendMessageEmmiter)="receivemessage($event)" ></app-second-component>
 
 
+      <h2>Dependency Injection</h2>
+      
+     
+      <div>
+        <input type="number" [(ngModel)]="firstnum" (change)="calculate()" />
+        +
+        <input type="number" [(ngModel)]="secondnum" (change)="calculate()" />
+        =
+        {{ output }}
+</div>
 

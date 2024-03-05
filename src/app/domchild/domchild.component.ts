@@ -10,7 +10,8 @@ import { FormsModule } from '@angular/forms';
     imports: [DomComponent,FormsModule]
 })
 export class DomchildComponent implements OnInit,OnDestroy,OnChanges, DoCheck,AfterContentInit,AfterContentChecked,AfterViewInit,AfterViewChecked{
-  
+  @Input()
+  myname= "";
   
   ngAfterContentInit(): void {
     console.log("child content init constructor is called");
@@ -41,7 +42,7 @@ export class DomchildComponent implements OnInit,OnDestroy,OnChanges, DoCheck,Af
   ngOnDestroy(): void {
       console.log("child on destroy")
   }
-  @Input() myname:string = '';
+  
 
   
   // @ContentChild('projectcontent')projectcontent:any;

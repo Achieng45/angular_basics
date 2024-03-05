@@ -4,12 +4,12 @@
     <form #myform="ngForm" (ngSubmit)="onsubmit(myform)">
     <div>
         <label for="uname">Username</label>
-        <input type="text" id="uname">
+        <input ngModel name="uname" type="text" id="uname" required="uname" >
     </div>
     
     <div>
         <label for="email">Email</label>
-        <input type="text" id="emain">
+        <input ngModel name="email" type="text" id="emain" required="email">
     </div>
     
     <div>

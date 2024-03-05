@@ -5,11 +5,13 @@
     <button [disabled]="myinput.value.length === 0" (click)="sendinput(myinput, myname)">
         Send Input
     </button>
-    <button (click)="togglechild()">
+    <!-- <button (click)="togglechild()">
         Toggle Child
-    </button>
+    </button> -->
 </div>
-<input type="text" [(ngModel)]="myname">
-<app-domchild *ngIf="isChild" [myname]="'Stephanie'">
-    <h2 #projectcontent>My name is Stephanie</h2>
+<!-- <input type="text" [(ngModel)]="myname">  -->
+
+    <!-- <h2 #projectcontent>My name is Stephanie</h2>  -->
+
+<app-domchild  >
 </app-domchild>

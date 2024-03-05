@@ -1,18 +1,20 @@
+import { NgFor, NgIf } from '@angular/common';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
-import { Observable } from 'rxjs';
+//import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-http',
   standalone: true,
-  imports: [BrowserModule,HttpClientModule],
+  imports: [BrowserModule,HttpClientModule,NgIf,FormsModule,NgFor],
   templateUrl: './http.component.html',
   styleUrl: './http.component.css'
 })
 export class HttpComponent  implements OnInit{
-  isLoading=false;
-  users: any;
+  isLoading=true;
+  users:any;
   url="https://api.github.com/users";
   constructor(private http:HttpClient){
 
@@ -27,10 +29,12 @@ export class HttpComponent  implements OnInit{
         console.log('success');
         console.log(res);
         this.users = res;
+        this.isLoading=false;
       },
       error: (error) => {
         console.log('error');
         console.log(error);
+        this.isLoading=false;
       },
       complete: () => {
         console.log('completed');

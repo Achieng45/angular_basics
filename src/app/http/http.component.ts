@@ -2,18 +2,19 @@ import { NgFor, NgIf } from '@angular/common';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { BrowserModule } from '@angular/platform-browser';
-//import { Observable } from 'rxjs';
+
+
+
 
 @Component({
   selector: 'app-http',
   standalone: true,
-  imports: [BrowserModule,HttpClientModule,NgIf,FormsModule,NgFor],
+  imports: [HttpClientModule,NgIf,FormsModule,NgFor],
   templateUrl: './http.component.html',
   styleUrl: './http.component.css'
 })
 export class HttpComponent  implements OnInit{
-  isLoading=true;
+  
   users:any;
   url="https://api.github.com/users";
   constructor(private http:HttpClient){
@@ -29,12 +30,12 @@ export class HttpComponent  implements OnInit{
         console.log('success');
         console.log(res);
         this.users = res;
-        this.isLoading=false;
+        
       },
       error: (error) => {
         console.log('error');
         console.log(error);
-        this.isLoading=false;
+        
       },
       complete: () => {
         console.log('completed');
@@ -46,8 +47,12 @@ export class HttpComponent  implements OnInit{
     
   
 
-  goToGithub(url:any){
-    window.open(url,'_blank')
+  goToGithub(url: string | URL | undefined){
+    window.open(url,'_blank');
   }
 
+}
+
+function subscribe(arg0: (res: any) => void, arg1: (error: any) => void, arg2: () => void) {
+  throw new Error('Function not implemented.');
 }

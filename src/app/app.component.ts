@@ -1,6 +1,5 @@
-import { Component, NgModule } from '@angular/core';
-import { FormsModule, NgModel } from '@angular/forms';
-import { BrowserModule } from '@angular/platform-browser';
+
+import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 
 

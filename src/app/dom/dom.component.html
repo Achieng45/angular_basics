@@ -1,0 +1,17 @@
+<p>dom works!</p>
+<div>
+    <p #myname>Stephanie</p>
+    <input type="text" #myinput ngModel>
+    <button [disabled]="myinput.value.length === 0" (click)="sendinput(myinput, myname)">
+        Send Input
+    </button>
+    <!-- <button (click)="togglechild()">
+        Toggle Child
+    </button> -->
+</div>
+<!-- <input type="text" [(ngModel)]="myname">  -->
+
+    <!-- <h2 #projectcontent>My name is Stephanie</h2>  -->
+
+<app-domchild  >
+</app-domchild>

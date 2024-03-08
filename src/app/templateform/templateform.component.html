@@ -1,0 +1,19 @@
+<p>templateform works!</p>
+<div>
+    <p>reactiveform works!</p>
+    <form #myform="ngForm" (ngSubmit)="onsubmit(myform)">
+    <div>
+        <label for="uname">Username</label>
+        <input ngModel name="uname" type="text" id="uname" required="uname" >
+    </div>
+    
+    <div>
+        <label for="email">Email</label>
+        <input ngModel name="email" type="text" id="emain" required="email">
+    </div>
+    
+    <div>
+        <button [disabled]="!myform.valid" (click)="onsubmit(myform)" type="button">Submit</button>
+    </div>
+    </form>
+    </div>
